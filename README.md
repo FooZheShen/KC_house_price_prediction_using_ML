@@ -70,9 +70,69 @@ Hence, all continuous variables shall undergo feature scaling to match the scale
 
 ## Building the Model
 After exploring and preprocessing the data, several iterations of multiple linear regression models were built in OLS, with price as the dependent variable.
+Model iterations focus on eliminating high multicollinearity features using VIF score and removing non-significant features by identifying columns with high P-value. 
 
-## Model Testing and Validation
+**Model 1**
+
+ Model 1 acts as a baseline model.
+OLS Regression Results show features with high P-values.
+VIF score of Model 1 shows features with high VIF value indicating high multicolinearity.
+
+We will be going back and forth between these two values to drop features with low statistical significance
+and to reduce the multicollinearity of features.
+
+**Model 2**
+
+From the previous model, we dropped 'grade_7' due to its very high VIF score.
+We can see it does not affect the R-squared value of the OLS model.
+But significantly changes the VIF score of all other features.
+
+From here we continue dropping features according to their P-value and VIF score
+
+**Model 3**
+
+Finally, we arrived to Model 3.
+We have dropped multiple features since and have been able to remove all low-significant features.
+We also managed to heavily reduce the VIF score of all available features in the model.
+By removing certain columns, we noticed that the R-squared value of the model has slightly dropped meaning we sacrificed a small model accuracy in favor of eliminating colinearity among predictors.
+
+With those assumptions satisfied, Model 3 is picked as our final model.
+
+## Final Model
+### 1. Normality Check
+A normally distributed residuals are necessary for estimating accurate standard errors for the model parameter estimates.
+We will check the distribution of residuals using a histogram and QQ plot.
+
+![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/8dbfe25b-882e-4427-90f1-911fc473fa5b)
+![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/a45d6d69-6605-49e3-a927-ab0c7d219a9a)
+
+Almost all points fall along the QQ line. 
+This shows the points have little to no deviations from the gradient.
+
+Hence, residuals from Model 3 are normally distributed and satisfy the normality assumptions.
+
+## 2. Model Testing and Validation
+![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/27e10cf1-2433-4404-b370-ce4d3dde43a8)
+
+
+![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/65f1d83a-29c6-4d2f-8302-6304d00e9009)
+
+The plot above shows the residuals (differences between the predicted and actual price) against the predicted values. 
+A well-performing model will have residuals scattered randomly around zero (the red dashed line).
+
 ## Results 
+The results show the R-squared and its adjusted value of the train and test data;
+
+* R-squared for train: 0.6033651270434894
+* R-Squared for test: 0.5898111024076923
+* Adjusted R-Squared for test: 0.6025143215779707
+* Adjusted R-squared for train: 0.5877521150001701
+* R-squared for train and test data accounts for about 60.3% and 58.9% respectively.
+* Adjusted R-squared for train and test data accounts for about 60.2% and 58.7% respectively.
+
+Both train and test sets are very close.
+Hence, the final model can predict house prices with an accuracy of nearly 60% when fitted with new data.
+
 ## Conclusion
 From the model, we gather;
 
@@ -81,19 +141,25 @@ Features that impact house price prediction in King County:
 2. The number of bedrooms and bathrooms
 3. The grade of the house.
 4. House condition.
-5. The view the property have
+5. The view the property has.
 6. If the house was renovated before.
 7. If the house is close to water.
 
-Limitations of the Model: 
-For this model, we did not address how much time the house have since been rennovated and thus any recent rennovations that may impact price were not considered. Further models could include an interaction variable of date built and date renovated.
+**Limitations of the Model:**
+
+For this model, we did not address how much time the house has since been renovated, and thus any recent renovations that may impact the price were not considered. 
 
 Given that some of the features needed to be log-transformed to satisfy regression assumptions, 
 new data used with the model would have to undergo similar preprocessing. 
 
 Additionally, the model was built on a dataset solely belonging to the region of King County, the model's applicability to data from other counties may be limited. 
 
-Furthermore, some outliers were removed, thus model may also not accurately predict extreme values.
+Furthermore, some outliers were removed, when fitted with new values, the model may also not accurately predict extreme values.
 
-Future Works
+**Future works:**
+
+Future models could include an interaction variable of date built and date renovated.
+Additionally, we can also explore the long and lat of houses to discover the actual distance from water and how prices may be affected. 
+
+
  
