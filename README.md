@@ -47,7 +47,7 @@ Since the project is specifically targeted toward house prices in the King Count
 To simplify the task, I have converted data for yr_renovated into a boolean. For future works, we should include the time between the last renovation and the time of sale.
 
 ### 3. Identifying Categorical Variables
-![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/23768f51-2d61-4c4a-bd97-0d7aff8b4d9a)
+![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/35ab69e4-220b-4ee4-af15-6a796072f68a)
 
 Since some variables (i.e number of Bedrooms, Bathrooms, etc) in the dataset seem to be numeric but they take on values from a limited set of possibilities,
 we shall identify them as Categorical Variables.
