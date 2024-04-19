@@ -60,13 +60,13 @@ we shall identify them as Categorical Variables.
 Even though the variables we identify as categorical are in integers (i.e. ‘bedrooms’), the number of possible values is limited to a fixed set.
 With one-hot, we convert each categorical value into a new categorical column and assign a binary value of 1 or 0 to those columns. Each integer value is represented as a binary vector.
 
-### 1. Log-Transform & Homoscedascity Check
+### 2. Log-Transform & Homoscedascity Check
 Homoscedasticity occurs when the variance in a dataset is constant, making it easier to estimate the standard deviation and variance of a data set. 
 
 Homoscedasticity is a key assumption for employing linear regression analysis. To validate the appropriateness of a linear regression analysis, homoscedasticity must not be violated outside a certain tolerance.
 Hence, all continuous variables shall undergo log transformation and check for homoscedasticity.
 
-### 2. Feature Scaling
+### 3. Feature Scaling
 Having features so different in magnitude will also affect the output and not only the learning process since features with larger magnitudes weigh more in the model.
 Hence, all continuous variables shall undergo feature scaling to match the scale of each other and the scale of the categorical variables.
 
