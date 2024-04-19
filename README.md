@@ -56,7 +56,9 @@ we shall identify them as Categorical Variables.
 8) Renovated
 
 ## Feature transformations
-When analyzing regression results, it's important to ensure that the residuals have a constant variance. I have taken steps to eliminate the skewness of the data as well as reducing biases due to value weight
+### 1. One-hot Encoding
+Even though the variables we identify as categorical are in integers (i.e. ‘bedrooms’), the number of possible values is limited to a fixed set.
+With one-hot, we convert each categorical value into a new categorical column and assign a binary value of 1 or 0 to those columns. Each integer value is represented as a binary vector.
 
 ### 1. Log-Transform & Homoscedascity Check
 Homoscedasticity occurs when the variance in a dataset is constant, making it easier to estimate the standard deviation and variance of a data set. 
