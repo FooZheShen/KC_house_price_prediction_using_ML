@@ -2,6 +2,7 @@
 
 ## Introduction
 ![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/d1d62863-2194-4c0f-af55-bd6990ad8c69)
+
 For this project, I am tasked by the Real Estate Agency to identify key features of a home when trying to predict the house prices for future use 
 when dealing with clients looking to sell or buy houses in King County.
 
