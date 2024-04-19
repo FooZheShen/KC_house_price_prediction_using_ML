@@ -1,13 +1,14 @@
 # Predicting King County House Prices using ML
 
 ## Introduction
+![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/d1d62863-2194-4c0f-af55-bd6990ad8c69)
 For this project, I am tasked by the Real Estate Agency to identify key features of a home when trying to predict the house prices for future use 
 when dealing with clients looking to sell or buy houses in King County.
 
 I will be building a Multiple Regression Model to analyze and predict house sales in a northwestern county using the King County Sales dataset that has been provided.
 
 This report discusses the steps, procedures, assumptions, and validation methods used for my analysis.
-![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/d1d62863-2194-4c0f-af55-bd6990ad8c69)
+
 
 
 ### Column Names and descriptions for Kings County Data Set
