@@ -62,6 +62,11 @@ we shall identify them as Categorical Variables.
 7) Grade
 8) Renovated
 
+![image](https://github.com/FooZheShen/KC_house_price_prediction_using_ML/assets/153910230/d723b401-febd-4865-835a-543c605dd913)
+For most of the boxplots, we can see most of the categorical variable medians display trend when plotted against price.
+This indicates they might be good predictors for our dependent variable, 'price'.
+Thus, we shall include them in our initial model.
+
 ## Feature transformations
 ### 1. One-hot Encoding
 Even though the variables we identify as categorical are in integers (i.e. ‘bedrooms’), the number of possible values is limited to a fixed set.
